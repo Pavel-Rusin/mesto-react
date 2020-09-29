@@ -46,7 +46,8 @@ function App() {
         />
         <PopupWithForm name="avatar" title="Обновить аватар" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopup}>
           <>
-          <input type="url" className="popup__input popup__input_avatar" name="avatar" id="image-avatar-url"  required />
+          <input type="url" className="popup__input popup__input_avatar" name="avatar" id="image-avatar-url" 
+          placeholder="Загрузить аватар" required />
           <span className="popup__error" id="image-avatar-url-error" />
           <button className="popup__submit popup__button_type_submit popup__button_type_avatar" type="submit">Сохранить</button>
           </>
@@ -54,10 +55,10 @@ function App() {
         <PopupWithForm name="shape" title="Редактировать профиль" isOpen={isEditProfilePopupOpen} onClose={closeAllPopup}>
           <>
           <input type="text" className="popup__input popup__input_fullname" name="name" 
-            id="fullname-input" minLength="2" maxLength="40" required />
+            id="fullname-input" minLength="2" maxLength="40" placeholder="Как Вас зовут?" required />
           <span className="popup__error" id="fullname-input-error" />
           <input type="text" className="popup__input popup__input_subtitle" name="about"
-            id="subtitle-input" minLength="2" maxLength="200" required />
+            id="subtitle-input" minLength="2" maxLength="200" placeholder="Напишите о себе" required />
           <span className="popup__error" id="subtitle-input-error" />
           <button className="popup__submit popup__button_type_submit popup__button_type_info" type="submit">Сохранить</button>
           </>
