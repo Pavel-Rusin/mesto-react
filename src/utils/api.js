@@ -57,6 +57,16 @@ class Api {
             .then(res => this._getResponseData(res))
     }
 
+    changeLikeCardStatus(cardId, isLiked) {
+        return fetch(`${this.url}/cards/likes/${cardId}`, {
+            method: `${ isLiked ? 'PUT' : 'DELETE' }`,
+            headers: {
+                authorization: this.headers.authorization
+            }
+        })
+            .then(res => this._getResponseData(res))
+    }
+
     deleteLike(cardId) {
         return fetch(`${this.url}/cards/likes/${cardId}`, {
             method: 'DELETE',
